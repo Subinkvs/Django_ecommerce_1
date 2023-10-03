@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'icart.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'icart_ecommerce',
+        'USER': 'postgres',
+        'PASSWORD': '261343',
+        'HOST' : 'localhost',
+        'PORT' : '5432'
     }
 }
 
@@ -128,3 +132,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SMTP CONFIGURATION
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'subinsundar9646k@gmail.com'
+EMAIL_HOST_PASSWORD = 'kdkn zolw btbc vkhh'
